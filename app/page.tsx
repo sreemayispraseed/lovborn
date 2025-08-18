@@ -1,9 +1,10 @@
-import Image from "next/image";
-import Hero from "./components/Hero";
-
+import Index from './components/Home/Index';
+import React from 'react';
 
 export default function Home() {
   return (
-    <Hero/>
+    <>
+      <Index/>
+    </>
   );
 }
