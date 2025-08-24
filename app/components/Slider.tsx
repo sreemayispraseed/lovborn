@@ -13,9 +13,9 @@ interface propsType {
 
 export const Slider: React.FC<propsType> = ({ img, title, mainTitle, desc }) => {
   return (
-    <div className='outline-none border-none relative w-full h-full'>
+    <div className='relative w-full h-screen'>
       {/* Absolute positioning for the text content overlay */}
-      <div className="absolute top-1/2 left-[10%] transform -translate-y-1/2 text-white p-4 z-10 w-full max-w-lg">
+      <div className="absolute top-1/2  transform -translate-y-1/2 text-white p-4 z-10 w-full max-w-lg">
         {/* Title */}
         <h3 className='text-sm uppercase font-light tracking-widest mb-2'>{title}</h3>
         {/* Main Title */}

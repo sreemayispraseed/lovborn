@@ -1,6 +1,6 @@
 // app/components/LovBornSection.tsx
 "use client";
-
+import assets from "../../../public/assets/assets"; 
 import Image from "next/image";
 
 export default function SecondSec() {
@@ -49,21 +49,21 @@ export default function SecondSec() {
         {/* Cards */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-8">
           {/* Gift Under */}
-          <div className="flex flex-col items-center text-center">
+            <div className="flex flex-col items-center text-center">
             <Image
-              src="/images/soaps1.jpg"
+              src={assets.gift}
               alt="Gift under 1000"
               width={100}
               height={70}
               className="rounded-xl object-cover"
             />
             <p className="mt-3 text-sm font-medium">GIFT UNDER ₹1000.52</p>
-          </div>
+            </div>
 
           {/* New In */}
           <div className="flex flex-col items-center text-center">
             <Image
-              src="/images/soaps2.jpg"
+              src={assets.new_in}
               alt="New In"
               width={100}
               height={70}
@@ -75,7 +75,7 @@ export default function SecondSec() {
           {/* Personalised */}
           <div className="flex flex-col items-center text-center">
             <Image
-              src="/images/soaps3.jpg"
+              src={assets.personalized}
               alt="Personalised"
               width={100}
               height={70}
@@ -87,7 +87,7 @@ export default function SecondSec() {
           {/* Best Selling */}
           <div className="flex flex-col items-center text-center">
             <Image
-              src="/images/soaps4.jpg"
+              src={assets.best}
               alt="Best Selling"
               width={100}
               height={70}

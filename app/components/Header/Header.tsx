@@ -1,97 +1,56 @@
 "use client";
-
-import React, { useState } from "react";
 import Link from "next/link";
-import { FaSearch, FaHeart, FaShoppingCart, FaBars, FaTimes } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaTwitter, FaSearch, FaShoppingCart } from "react-icons/fa";
 
-const Header = () => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
-  };
-
+export default function Header() {
   return (
-    <header className="bg-[#FFF8EC] text-stone-800 font-sans sticky top-0 z-50 shadow-sm">
-      <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-        {/* Desktop Navigation Links */}
-        <nav className="hidden md:flex items-center space-x-6">
-          <Link href="/" className="hover:text-stone-600 transition-colors">
-            <span className="underline-offset-4 decoration-2 underline">HOME</span>
-          </Link>
-          <Link href="/about" className="hover:text-stone-600 transition-colors">
-            ABOUT US
-          </Link>
-          <Link href="/products" className="hover:text-stone-600 transition-colors">
-            PRODUCTS
-          </Link>
-          <Link href="/cart" className="hover:text-stone-600 transition-colors">
-            CART
-          </Link>
-          <Link href="/contact" className="hover:text-stone-600 transition-colors">
-            CONTACT US
-          </Link>
-        </nav>
-
-        {/* Logo */}
-        <div className="flex-grow text-center">
-          <Link href="/" className="text-3xl font-serif italic text-stone-800 hover:text-stone-600 transition-colors">
-            LOV BORN
-          </Link>
-        </div>
-
-        {/* Icons and Mobile Menu Button */}
-        <div className="flex items-center space-x-4">
-          <button className="hidden md:block text-stone-800 hover:text-stone-600 transition-colors" aria-label="Search">
-            <FaSearch size={20} />
-          </button>
-          <button className="hidden md:block text-stone-800 hover:text-stone-600 transition-colors" aria-label="Wishlist">
-            <FaHeart size={20} />
-          </button>
-          <button className="hidden md:block text-stone-800 hover:text-stone-600 transition-colors" aria-label="Shopping Cart">
-            <FaShoppingCart size={20} />
-          </button>
-          <div className="md:hidden">
-            <button onClick={toggleMobileMenu} aria-label="Toggle mobile menu">
-              {isMobileMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
-            </button>
+    <header className="w-full fixed top-0 z-50 ">
+      <div className="bg-transperent text-white border-b border-[#ffc8778c] pb-4">
+        <div className="container mx-auto flex items-center justify-between">
+          {/* Left - Logo */}
+          <div className="flex items-center space-x-2">
+           <img src="/assets/images/logo.svg" alt="Logo"  />
           </div>
+
+          {/* Center - Nav Links */}
+<div className="flex ">
+            <nav className="flex flex-col space-x-8 text-sm uppercase font-light mt-3 justify-between">
+             <div className="flex items-center justify-end space-x-4">
+            <Link href="#"><FaFacebookF className="hover:text-orange-400" /></Link>
+            <Link href="#"><FaInstagram className="hover:text-orange-400" /></Link>
+            <Link href="#"><FaTwitter className="hover:text-orange-400" /></Link>
+            <span className="text-gray-500">|</span>
+            <Link href="#"><FaSearch className="hover:text-orange-400" /></Link>
+            <Link href="/cart" className="relative">
+              <FaShoppingCart className="hover:text-orange-400" />
+              <span className="absolute -top-2 -right-2 bg-red-500 text-xs w-4 h-4 flex items-center justify-center rounded-full">
+                1
+              </span>
+            </Link>
+          </div>
+            <div className="flex gap-[40px] align-center text-[18px] pr-[70px]">
+            <Link href="/" className="hover:text-orange-400">Home</Link>
+            <Link href="/about" className="hover:text-orange-400">About Us</Link>
+            <Link href="/products" className="hover:text-orange-400">Products</Link>
+            <Link href="/cart" className="hover:text-orange-400">Cart</Link>
+            <Link href="/contact" className="hover:text-orange-400">Contact Us</Link>
+            </div>
+          </nav>
+<div className="px-3 py-[29px]">
+        <Link
+          href="/contact"
+          className="rounded-full text-white text-[18px] px-4 py-2 border border-white transition duration-300"
+        >
+          Contact Us
+        </Link>
+      </div>
+      </div>
+          {/* Right - Icons */}
+         
         </div>
       </div>
 
-      {/* Mobile Menu */}
-      <div className={`md:hidden ${isMobileMenuOpen ? "block" : "hidden"}`}>
-        <div className="flex flex-col items-center py-4 bg-[#FDF9F2] space-y-4 border-t border-gray-200">
-          <Link href="/" className="hover:text-stone-600 transition-colors" onClick={toggleMobileMenu}>
-            <span className="underline-offset-4 decoration-2 underline">HOME</span>
-          </Link>
-          <Link href="/about" className="hover:text-stone-600 transition-colors" onClick={toggleMobileMenu}>
-            ABOUT US
-          </Link>
-          <Link href="/products" className="hover:text-stone-600 transition-colors" onClick={toggleMobileMenu}>
-            PRODUCTS
-          </Link>
-          <Link href="/cart" className="hover:text-stone-600 transition-colors" onClick={toggleMobileMenu}>
-            CART
-          </Link>
-          <Link href="/contact" className="hover:text-stone-600 transition-colors" onClick={toggleMobileMenu}>
-            CONTACT US
-          </Link>
-          <div className="flex items-center space-x-6 mt-4">
-            <button className="text-stone-800 hover:text-stone-600 transition-colors" aria-label="Search">
-              <FaSearch size={20} />
-            </button>
-            <button className="text-stone-800 hover:text-stone-600 transition-colors" aria-label="Wishlist">
-              <FaHeart size={20} />
-            </button>
-            <button className="text-stone-800 hover:text-stone-600 transition-colors" aria-label="Shopping Cart">
-              <FaShoppingCart size={20} />
-            </button>
-          </div>
-        </div>
-      </div>
+      
     </header>
   );
-};
-
-export default Header;
+}

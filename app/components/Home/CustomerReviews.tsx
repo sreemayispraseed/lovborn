@@ -3,6 +3,9 @@
 import { useState } from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import Image from "next/image";
+import assets from "../../../public/assets/assets"; 
+
+import type { StaticImageData } from "next/image";
 
 interface Review {
   id: number;
@@ -12,7 +15,8 @@ interface Review {
   author: string;
   verified: boolean;
   item: string;
-  image: string;
+  image: StaticImageData | string;
+  propic: StaticImageData | string;
 }
 
 const reviews: Review[] = [
@@ -24,8 +28,9 @@ const reviews: Review[] = [
       "The quality of the jewelry exceeded my expectations. Each piece feels premium and beautifully crafted, and the designs are incredibly stylish. I'm absolutely obsessed with my new collection!",
     author: "Vincent P.",
     verified: true,
+    propic: assets.avt3,
     item: "Lupen mono",
-    image: "/images/review-1.jpg", // Replace with your image path
+    image: assets.review1, // Replace with your image path
   },
   {
     id: 2,
@@ -35,42 +40,24 @@ const reviews: Review[] = [
       "I was blown away by the craftsmanship of these jewelry pieces. Every item feels luxurious and the modern designs are simply stunning. I can't get enough of my new favorite accessories!",
     author: "Emily T.",
     verified: true,
+    propic: assets.avt4,
     item: "Lupen loper",
-    image: "/images/review-2.jpg", // Replace with your image path
+    image: assets.review2, // Replace with your image path
   },
-  {
-    id: 3,
-    rating: 4,
-    title: "GREAT QUALITY",
-    review:
-      "I'm very impressed with the quality and design. It's exactly what I was looking for. I will definitely be purchasing from this store again.",
-    author: "Jessica R.",
-    verified: true,
-    item: "Orion Ring",
-    image: "/images/review-3.jpg", // Replace with your image path
-  },
-  {
-    id: 4,
+    {
+    id: 2,
     rating: 5,
-    title: "STUNNING!",
+    title: "LOVE IT!",
+    propic: assets.avt4,
     review:
-      "This necklace is even more beautiful in person. I get so many compliments every time I wear it. Highly recommend!",
-    author: "David L.",
+      "I was blown away by the craftsmanship of these jewelry pieces. Every item feels luxurious and the modern designs are simply stunning. I can't get enough of my new favorite accessories!",
+    author: "Emily T.",
     verified: true,
-    item: "Galaxy Pendant",
-    image: "/images/review-4.jpg", // Replace with your image path
+    item: "Lupen loper",
+    image: assets.review2, // Replace with your image path
   },
-  {
-    id: 5,
-    rating: 5,
-    title: "EXCELLENT!",
-    review:
-      "Fast shipping and the earrings are perfect. They have a nice weight to them and feel very durable.",
-    author: "Sarah B.",
-    verified: true,
-    item: "Nova Earrings",
-    image: "/images/review-5.jpg", // Replace with your image path
-  },
+
+
 ];
 
 const CustomerReviews = () => {
@@ -156,9 +143,8 @@ const CustomerReviews = () => {
                     </p>
                     <div className="flex items-center space-x-4">
                       <div className="relative w-12 h-12 rounded-full overflow-hidden">
-                        {/* You would use an Image component here for the author's profile picture */}
-                        {/* For now, a placeholder div */}
-                        <div className="w-12 h-12 bg-gray-400 rounded-full" />
+                      
+                        <div className="w-12 h-12 bg-gray-400 rounded-full" ><Image src={review.propic} width={50} height={50} alt="profile photo" /></div>
                       </div>
                       <div>
                         <div className="flex items-center space-x-2">

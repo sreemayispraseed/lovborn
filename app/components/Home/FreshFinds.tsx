@@ -5,6 +5,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
 import Image from "next/image";
+import assets from "../../../public/assets/assets"; 
 
 const products = [
   {
@@ -12,7 +13,7 @@ const products = [
     title: "Classic Vanilla",
     price: "₹1000.52",
     desc: "Classic Vanilla is a natural family luxury soap made with shea butter, almond oil, and a soothing vanilla fragrance.",
-    img: "/images/vanilla.jpg",
+    img: assets.product1,
     tag: "NEW IN",
   },
   {
@@ -20,31 +21,32 @@ const products = [
     title: "Nargis Bloom",
     price: "₹1000.52",
     desc: "Nargis Bloom is a floral luxury soap with jojoba oil, almond oil, and the gentle scent of Nargis flowers.",
-    img: "/images/nargis.jpg",
+    img: assets.product2,
   },
   {
     id: 3,
     title: "Indian Herbs and Oils",
     price: "₹1000.52",
     desc: "Indian Herbs and Oils is a natural luxury soap made with neem, Rakcham, and ashwagandha for a herbal cleanse.",
-    img: "/images/herbs.jpg",
+    img: assets.product3,
   },
   {
     id: 4,
     title: "Vedic Treasure",
     price: "₹1000.52",
     desc: "Experience the ancient purity of nature with Vedic Treasure soap.",
-    img: "/images/vedic.jpg",
+    img: assets.product4,
     tag: "NEW IN",
   },
-  {
-    id: 5,
-    title: "Summer Strawberry",
+   {
+    id: 4,
+    title: "Vedic Treasure",
     price: "₹1000.52",
-    desc: "A silky-smooth bar enriched with strawberry milk for a deeply moisturising feel.",
-    img: "/images/strawberry.jpg",
+    desc: "Experience the ancient purity of nature with Vedic Treasure soap.",
+    img: assets.product4,
     tag: "NEW IN",
   },
+
 ];
 
 export default function FreshFinds() {

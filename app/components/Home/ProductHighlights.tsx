@@ -1,19 +1,19 @@
 // app/components/ProductHighlights.tsx
 "use client";
-
+import assets from "../../../public/assets/assets"; 
 import Image from "next/image";
 
 const products = [
   {
     id: 1,
     title: "NATURALLY MADE",
-    img: "/images/naturally-made.jpg",
+    img: assets.naturesoap,
     link: "#",
   },
   {
     id: 2,
     title: "VEDIC TREASURE",
-    img: "/images/vedic-treasure.jpg",
+    img: assets.vedicsoup,
     link: "#",
   },
 ];

@@ -8,7 +8,8 @@ import CustomerReviews from './CustomerReviews';
 
 const Home: React.FC = () => {
     return (
-        <div>
+        <>
+    
             <Hero />
             <SecondSec />
             <FreshFinds />
@@ -16,34 +17,8 @@ const Home: React.FC = () => {
             <ProductHighlights />
             <CustomerReviews />
 
-            {/* You can add more sections or components here as needed */}
-            {/* For example, you can add a footer or additional content sections */}
-            {/* <Footer /> */}
-
-            {/* Additional sections can be added here */}
-            {/* For example, you can add a section for featured products, testimonials, etc. */}
-            {/* <FeaturedProducts /> */}
-            {/* <Testimonials /> */}
-
-            {/* You can add more sections or components here as needed */}
-            {/* For example, you can add a footer or additional content sections */}
-            {/* <Footer /> */}
-
-            {/* Additional sections can be added here */}
-            {/* For example, you can add a section for featured products, testimonials, etc. */}
-            {/* <FeaturedProducts /> */}
-            {/* <Testimonials /> */}
-            {/* You can add more sections or components here as needed */}
-            {/* For example, you can add a footer or additional content sections */}
-            {/* <Footer /> */}
-
-            {/* Additional sections can be added here */}
-            {/* For example, you can add a section for featured products, testimonials, etc. */}
-            {/* <FeaturedProducts /> */}
-            {/* <Testimonials /> */}
-            {/* You can add more sections or components here as needed */}
-            {/* Other components can be added here */}
-        </div>
+        </>   
+        
     );
 };
 
