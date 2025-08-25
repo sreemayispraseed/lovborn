@@ -9,7 +9,6 @@ import CustomerReviews from './CustomerReviews';
 const Home: React.FC = () => {
     return (
         <>
-    
             <Hero />
             <SecondSec />
             <FreshFinds />

@@ -109,7 +109,7 @@ const CustomerReviews = () => {
                 key={review.id}
                 className={`flex-shrink-0 w-full md:w-1/2 p-2`} // Adjusted width for 2 reviews per slide
               >
-                <div className="md:flex bg-stone-700 rounded-lg overflow-hidden shadow-lg h-full">
+                <div className="md:flex bg-white  overflow-hidden shadow-lg h-full">
                   {/* Image Section */}
                   <div className="relative w-full md:w-1/2 min-h-[300px]">
                     <Image
@@ -135,10 +135,10 @@ const CustomerReviews = () => {
                         </svg>
                       ))}
                     </div>
-                    <h3 className="text-2xl font-bold mb-4">
+                    <h3 className="text-2xl text-black mb-4">
                       {review.title}
                     </h3>
-                    <p className="text-lg text-gray-300 mb-6">
+                    <p className="text-[16px]  text-[#818181] mb-6">
                       &quot;{review.review}&quot;
                     </p>
                     <div className="flex items-center space-x-4">
@@ -148,16 +148,16 @@ const CustomerReviews = () => {
                       </div>
                       <div>
                         <div className="flex items-center space-x-2">
-                          <span className="font-semibold">{review.author}</span>
+                          <span className="text-[#1F1F1F]">{review.author}</span>
                           {review.verified && (
                             <span className="text-green-400 text-sm">
                               ✓ Verified
                             </span>
                           )}
                         </div>
-                        <p className="text-sm text-gray-400">
+                        <p className="text-sm text-[#818181]">
                           Item purchased:{" "}
-                          <span className="underline">
+                          <span className="underline text-[#AE873E] ">
                             {review.item}
                           </span>
                         </p>

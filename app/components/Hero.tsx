@@ -2,7 +2,7 @@
 import React from "react";
 import SlickSlider from "react-slick"; // carousel wrapper
 import Slider from "./Slider"; // your custom slide component
-import assets from "../../public/assets/assets"; 
+import assets from "../../public/assets/assets";
 
 const Hero = () => {
   const settings = {
@@ -19,9 +19,9 @@ const Hero = () => {
     {
       img: assets.banner1,
       id: 1,
-      title: "Title 1",
-      mainTitle: "Main 1",
-      desc: "Description 1",
+      title: "IDEAL SKIN RADIANCE",
+      mainTitle: "Glow Naturally with Lovborn",
+      desc: "Our soap is thoughtfully formulated with natural ingredients to gently cleanse, nourish, and restore your skin’s natural radiance. Experience a glow that feels as healthy as it looks—pure, soft, and luminous every day.",
     },
     {
       img: assets.banner2,
@@ -47,7 +47,7 @@ const Hero = () => {
   ];
 
   return (
-    <div className="relative w-full h-screen overflow-hidden">
+    <div className="relative w-full h-screen overflow-hidden hero-sec-gtt ">
       <SlickSlider {...settings}>
         {sliderData.map((item) => (
           <Slider
@@ -59,6 +59,9 @@ const Hero = () => {
           />
         ))}
       </SlickSlider>
+
+      {/* Scoped styles for slick dots */}
+      
     </div>
   );
 };

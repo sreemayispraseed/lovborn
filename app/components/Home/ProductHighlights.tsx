@@ -21,7 +21,8 @@ const products = [
 export default function ProductHighlights() {
   return (
     <section className="w-full py-12">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 px-6">
+      <div className="container mx-auto">
+      <div className=" mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 px-6">
         {products.map((item) => (
           <div key={item.id} className="flex flex-col">
             {/* Product Image */}
@@ -49,6 +50,7 @@ export default function ProductHighlights() {
             </a>
           </div>
         ))}
+      </div>
       </div>
     </section>
   );

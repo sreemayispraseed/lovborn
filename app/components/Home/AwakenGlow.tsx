@@ -21,17 +21,17 @@ export default function AwakenGlow() {
 
         {/* Right Content */}
         <div className="flex flex-col items-center justify-center  text-center md:text-left p-8">
-          <h2 className="text-3xl font-light italic text-white">
+          <h2 className="text-[48px]  italic text-white">
             Awaken <span className="not-italic font-medium">Your Glow</span>
           </h2>
-          <p className="mt-4 text-sm text-white max-w-md leading-relaxed">
+          <p className="mt-4 text-[16px] text-white max-w-[517px] leading-relaxed">
             Indulge in our artisan soap collection crafted with natural
             ingredients to nourish your skin and senses. Treat yourself to
             exclusive offers and limited-time deals—because you deserve a little
             luxury every day.
           </p>
 
-          <button className="mt-6 px-6 py-2 border border-white text-white text-sm rounded-md hover:bg-white hover:text-gray-900 transition">
+          <button className="mt-6 px-6 py-2 border border-white text-white text-[16px] rounded-md hover:bg-white hover:text-gray-900 transition">
             SHOP NOW →
           </button>
         </div>

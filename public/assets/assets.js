@@ -3,7 +3,7 @@ import banner2 from "./images/home-banner-slider/slider2.jpg";
 import banner3 from "./images/home-banner-slider/slider3.jpg";
 import banner4 from "./images/home-banner-slider/slider4.jpg";
 import gift from "./images/home/gift.png";
-import best from "./images/home/best_selling.png";
+import best from "./images/home/best.png";
 import new_in from "./images/home/new_in.png";
 import naturesoap from "./images/home/naturesoup.jpg";
 import personalized from "./images/home/personalized.png";
@@ -32,13 +32,13 @@ import phone from "./images/footer/phone.svg";
 import payment from "./images/footer/payment.svg";
 import shipping from "./images/footer/free_shipping.svg";
 import support from "./images/footer/support.svg";
-
-
-
+import lovbon_logo from "./images/home/logo_lov.png";
+import return_icon from "./images/footer/return.svg"
 
 
 export default {
     banner1,
+    lovbon_logo,
     banner2,
     banner3,
     banner4,
@@ -72,7 +72,7 @@ export default {
     payment,
     shipping,
     support,
-
+    return_icon,
 
    
 }
