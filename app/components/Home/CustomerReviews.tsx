@@ -74,7 +74,7 @@ const CustomerReviews = () => {
 
   return (
     <section className="bg-stone-800 text-white py-16 font-serif">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-[15px] md:px-[50px] lg:px-[100px]">
         {/* Header */}
         <div className="flex justify-between items-center mb-12">
           <h2 className="text-4xl italic">Customer Reviews</h2>

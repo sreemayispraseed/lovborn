@@ -33,11 +33,39 @@ import payment from "./images/footer/payment.svg";
 import shipping from "./images/footer/free_shipping.svg";
 import support from "./images/footer/support.svg";
 import lovbon_logo from "./images/home/logo_lov.png";
-import return_icon from "./images/footer/return.svg"
+import return_icon from "./images/footer/return.svg";
+import redblue from "./images/footer/redblue.svg";
+import amex from "./images/footer/amex.svg";
+import shop from "./images/footer/shop.svg";
+import paywhite from "./images/footer/paywhite.svg";
+import snapchat from "./images/footer/snapchat.svg";
+import aboutbg from "./images/about/about_bnr.png";
+import Core_Value from "./images/about/Core_Value.png";
+import about_brdr from "./images/about/about_brdr.png";
+import product_elp from "./images/products/product_elp.png";
+import image1 from "./images/products/image1.png";
+import image2 from "./images/products/image2.png";
+import image3 from "./images/products/image3.png";
+import image5 from "./images/products/image5.png";
+import image6 from "./images/products/image6.png";
 
 
+ 
 export default {
     banner1,
+    image1,
+    image2,
+    image3,
+    image5,
+    image6,
+    aboutbg,
+    Core_Value,
+    about_brdr,
+    snapchat,
+    redblue,
+    amex,
+    shop,
+    paywhite,
     lovbon_logo,
     banner2,
     banner3,
@@ -73,7 +101,7 @@ export default {
     shipping,
     support,
     return_icon,
+    product_elp,
 
-   
 }
  

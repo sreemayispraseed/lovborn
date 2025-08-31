@@ -9,7 +9,7 @@ export default function SecondSec() {
       {/* Top section */}
       <div className="container mx-auto px-6 py-12">
       <div className="px-6 py-12 flex flex-col ">
-        <div className="flex items-center justify-center mb-12 gap-[150px]">
+        <div className="lg:flex flex-cols items-center justify-center mb-12 gap-[150px]">
           {/* Logo circle */}
           <div className="">
           <div className="w-[272.5px] h-[272.5] rounded-full border border-yellow-600 flex items-center justify-center px-[26px]">
@@ -24,7 +24,7 @@ export default function SecondSec() {
 
           {/* Text */}
           <div className="text-left max-w-[1028px]">
-            <p className="text-[36px] text-gray-700 leading-relaxed mb-[30px]">
+            <p className="text-[20px] md:text-[25px] lg:text-[30px]  text-gray-700 leading-relaxed mb-[30px]">
               We believe soap is more than a cleansing ritual—
                it’s a moment of self-care and purity. <span className="text-[#A9A9A9]">  
               Our curated collection blends nature’s finest ingredients with
@@ -53,7 +53,7 @@ export default function SecondSec() {
           for Every <span className="text-[#957127]">Skin</span> 
         </h2>
         {/* Cards */}
-        <div className="grid grid-cols-2 gap-8">
+        <div className="grid lg:grid-cols-2 lg:gap-8">
           {/* Gift Under */}
             <div className="flex  text-center mb-[50px]">
             <Image
@@ -63,7 +63,7 @@ export default function SecondSec() {
               height={70}
               className=" object-cover w-[200px] rounded-full"
             />
-            <p className="mt-3 text-[36px] font-medium ml-4">GIFT UNDER ₹1000.52</p>
+            <p className="mt-3 text-[20px] md:text-[25px] lg:text-[30px] text-[36px] font-medium ml-4">GIFT UNDER ₹1000.52</p>
             </div>
 
           {/* New In */}
@@ -75,11 +75,11 @@ export default function SecondSec() {
               height={70}
               className=" object-cover rounded-full w-[200px]"
             />
-            <p className="mt-3 text-[36px] ml-4 font-medium">NEW IN</p>
+            <p className="mt-3 text-[20px] md:text-[25px] lg:text-[30px] text-[36px] ml-4 font-medium">NEW IN</p>
           </div>
 
           {/* Personalised */}
-          <div className="flex  text-center pl-[100px]">
+          <div className="flex  text-center xl:pl-[100px]">
             <Image
               src={assets.personalized}
               alt="Personalised"
@@ -87,11 +87,11 @@ export default function SecondSec() {
               height={70}
               className=" object-cover rounded-full w-[200px]"
             />
-            <p className="mt-3 text-[36px] ml-4 font-medium">PERSONALISED</p>
+            <p className="mt-3 text-[20px] md:text-[25px] lg:text-[30px] text-[36px] ml-4 font-medium">PERSONALISED</p>
           </div>
 
           {/* Best Selling */}
-          <div className="flex  text-center pl-[80px]">
+          <div className="flex  text-center xl:pl-[80px]">
             <Image
               src={assets.best}
               alt="Best Selling"
@@ -99,7 +99,7 @@ export default function SecondSec() {
               height={70}
               className=" object-cover rounded-full w-[200px]"
             />
-            <p className="mt-3 text-[36px] ml-4 font-medium text-yellow-700">
+            <p className="mt-3 text-[20px] md:text-[25px] lg:text-[30px] text-[36px] ml-4 font-medium text-yellow-700">
               BEST SELLING ↗
             </p>
           </div>

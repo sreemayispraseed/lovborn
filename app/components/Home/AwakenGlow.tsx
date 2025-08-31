@@ -1,6 +1,4 @@
-// app/components/AwakenGlow.tsx
 "use client";
-
 import Image from "next/image";
 import assets from "../../../public/assets/assets"; 
 
@@ -31,7 +29,7 @@ export default function AwakenGlow() {
             luxury every day.
           </p>
 
-          <button className="mt-6 px-6 py-2 border border-white text-white text-[16px] rounded-md hover:bg-white hover:text-gray-900 transition">
+          <button className="mt-6 px-6 py-2 border border-white text-white text-[16px]  hover:bg-white hover:text-gray-900 transition">
             SHOP NOW →
           </button>
         </div>

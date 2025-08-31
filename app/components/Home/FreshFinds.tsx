@@ -1,11 +1,11 @@
 "use client";
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/navigation";
-import { Navigation } from "swiper/modules";
+import { useRef } from "react";
 import Image from "next/image";
-import assets from "../../../public/assets/assets"; 
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper as SwiperType } from "swiper";
+import "swiper/css";
+import assets from "../../../public/assets/assets";
 
 const products = [
   {
@@ -38,7 +38,7 @@ const products = [
     img: assets.product4,
     tag: "NEW IN",
   },
-   {
+  {
     id: 4,
     title: "Vedic Treasure",
     price: "₹1000.52",
@@ -46,24 +46,23 @@ const products = [
     img: assets.product4,
     tag: "NEW IN",
   },
-
 ];
 
-export default function FreshFinds() {
+interface FreshFindsProps {
+  bgColor?: string; // allow custom bg color
+}
+
+export default function FreshFinds({ bgColor = "bg-[#fdf6f0]" }: FreshFindsProps) {
+  const swiperRef = useRef<SwiperType | null>(null);
+
   return (
-    <section className="bg-[#fdf6f0] py-12">
-      {/* Title in container */}
-      <div className="container mx-auto px-6">
-        <h2 className="text-2xl sm:text-3xl font-light italic text-gray-900 mb-8">
+    <section className={`${bgColor} py-12 overflow-hidden`}>
+      {/* Slider full width aligned with container */}
+      <div className="w-full pl-6 sm:pl-[5%]">
+        <h2 className="text-[48px] font-light italic text-gray-900 mb-8">
           <span className="text-gray-900 not-italic font-medium">Fresh Finds</span>, Just In
         </h2>
-     
-
-      {/* Slider full-width */}
-      <div className="w-full pl-6">
         <Swiper
-          modules={[Navigation]}
-          navigation
           spaceBetween={24}
           slidesPerView={1.2}
           breakpoints={{
@@ -71,19 +70,20 @@ export default function FreshFinds() {
             1024: { slidesPerView: 3.2 },
             1280: { slidesPerView: 4.2 },
           }}
-          className="!pr-6"
+          className="!overflow-visible"
+          onSwiper={(swiper) => (swiperRef.current = swiper)}
         >
-          {products.map((item) => (
-            <SwiperSlide key={item.id}>
-              <div className="bg-white rounded-lg shadow-sm hover:shadow-md transition p-4 h-full flex flex-col">
+          {products.map((item, index) => (
+            <SwiperSlide key={index}>
+              <div className="p-4 h-full flex flex-col cursor-pointer">
                 {/* Image */}
-                <div className="relative">
+                <div className="relative overflow-hidden h-[250px] lg:h-[320px]">
                   <Image
                     src={item.img}
                     alt={item.title}
                     width={400}
                     height={300}
-                    className="rounded-md object-cover w-full h-56"
+                    className="object-cover w-full h-full"
                   />
                   {item.tag && (
                     <span className="absolute top-2 left-2 bg-orange-600 text-white text-xs px-2 py-1 rounded">
@@ -96,16 +96,15 @@ export default function FreshFinds() {
                 <div className="mt-4 flex-1">
                   <div className="flex justify-between items-center">
                     <h3 className="font-medium text-gray-900">{item.title}</h3>
-                    <p className="text-sm font-semibold">{item.price}</p>
+                    <p className="text-[20px] font-semibold">{item.price}</p>
                   </div>
-                  <p className="mt-2 text-sm text-gray-600">{item.desc}</p>
+                  <p className="mt-2 text-[16px] text-gray-600">{item.desc}</p>
                 </div>
               </div>
             </SwiperSlide>
           ))}
         </Swiper>
       </div>
-       </div>
     </section>
   );
 }

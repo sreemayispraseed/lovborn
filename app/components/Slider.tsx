@@ -15,7 +15,8 @@ export const Slider: React.FC<propsType> = ({ img, title, mainTitle, desc }) => 
   return (
     <div className='relative w-full h-screen'>
       {/* Absolute positioning for the text content overlay */}
-      <div className="pl-[152px] absolute top-1/2  transform text-white p-4 z-10 w-full ">
+     
+      <div className="pl-40 absolute bottom-[130px] transform text-white p-4 z-10 w-full ">
         {/* Title */}
         <h3 className='text-[19px] uppercase font-light tracking-widest mb-2'>{title}</h3>
         {/* Main Title */}
@@ -28,7 +29,7 @@ export const Slider: React.FC<propsType> = ({ img, title, mainTitle, desc }) => 
           <FaArrowRight />
         </button>
       </div>
-
+      
       {/* Background image, fills the container */}
       {img && (
         <Image
