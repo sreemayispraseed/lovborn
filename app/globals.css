@@ -29,7 +29,7 @@ body {
   .slick-dots {
           bottom: 88px;
     left: 0;
-    padding-left: 150px !important;
+    padding-left: 100px !important;
     text-align: left !important;
         }
         .slick-dots li {

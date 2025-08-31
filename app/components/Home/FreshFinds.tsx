@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import Image from "next/image";
+import Link from "next/link"; 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Swiper as SwiperType } from "swiper";
 import "swiper/css";
@@ -75,6 +76,7 @@ export default function FreshFinds({ bgColor = "bg-[#fdf6f0]" }: FreshFindsProps
         >
           {products.map((item, index) => (
             <SwiperSlide key={index}>
+              <Link href="/product-detail">
               <div className="p-4 h-full flex flex-col cursor-pointer">
                 {/* Image */}
                 <div className="relative overflow-hidden h-[250px] lg:h-[320px]">
@@ -101,8 +103,10 @@ export default function FreshFinds({ bgColor = "bg-[#fdf6f0]" }: FreshFindsProps
                   <p className="mt-2 text-[16px] text-gray-600">{item.desc}</p>
                 </div>
               </div>
+              </Link>
             </SwiperSlide>
           ))}
+          
         </Swiper>
       </div>
     </section>

@@ -14,8 +14,8 @@ interface PageHeaderProps {
 export default function PageHeader({ title, breadcrumbs = [] }: PageHeaderProps) {
   return (
     <section className="w-full h-full bg-white ">
-      <div className="container mx-auto px-6 md:px-12 lg:px-20 ">
-       <div className="flex flex-col pt-[200px] border-b">
+      <div className="container mx-auto px-[15px] md:px-[50px] lg:px-[100px] ">
+       <div className="flex flex-col pt-[200px] border-b border-gray-200">
         {/* Breadcrumbs */}
         {breadcrumbs.length > 0 && (
           <nav className="mb-3 text-sm text-gray-500">
