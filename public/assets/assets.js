@@ -48,11 +48,15 @@ import image2 from "./images/products/image2.png";
 import image3 from "./images/products/image3.png";
 import image5 from "./images/products/image5.png";
 import image6 from "./images/products/image6.png";
+import right_arrow from "./images/icons/right_arrow.svg";
+import location from "./images/icons/location.svg";
 
 
  
 export default {
     banner1,
+    right_arrow,
+    location,
     image1,
     image2,
     image3,

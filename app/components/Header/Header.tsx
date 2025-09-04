@@ -16,24 +16,24 @@ export default function Header() {
 <div className="flex ">
             <nav className="flex flex-col text-sm uppercase font-light mt-3 justify-between">
              <div className="flex items-center justify-end gap-[10px] mb-2">
-            <Link href="#"><FaFacebookF className="hover:text-orange-400" /></Link>
-            <Link href="#"><FaInstagram className="hover:text-orange-400" /></Link>
-            <Link href="#"><FaTwitter className="hover:text-orange-400" /></Link>
+            <Link href="#"><FaFacebookF className="" /></Link>
+            <Link href="#"><FaInstagram className="" /></Link>
+            <Link href="#"><FaTwitter className="" /></Link>
             <span className="text-gray-500">|</span>
-            <Link href="#"><FaSearch className="hover:text-orange-400" /></Link>
+            <Link href="#"><FaSearch className="" /></Link>
             <Link href="/cart" className="relative">
-              <FaShoppingCart className="hover:text-orange-400" />
+              <FaShoppingCart className="" />
               <span className="absolute -top-2 -right-2 bg-red-500 text-xs w-4 h-4 flex items-center justify-center rounded-full">
                 1
               </span>
             </Link>
           </div>
             <div className="flex gap-[40px] align-center text-[18px] ">
-            <Link href="/" className="hover:text-orange-400">Home</Link>
-            <Link href="/about-us" className="hover:text-orange-400">About Us</Link>
-            <Link href="/products" className="hover:text-orange-400">Products</Link>
-            <Link href="" className="hover:text-orange-400">Cart</Link>
-            <Link href="" className="hover:text-orange-400">Contact Us</Link>
+            <Link href="/" className="hover:text-[#9B7B4C]">Home</Link>
+            <Link href="/about-us" className="hover:text-[#9B7B4C]">About Us</Link>
+            <Link href="/products" className="hover:text-[#9B7B4C]">Products</Link>
+            <Link href="" className="hover:text-[#9B7B4C]">Cart</Link>
+            <Link href="/contact-us" className="hover:text-[#9B7B4C]">Contact Us</Link>
             </div>
           </nav>
 {/* <div className="px-3 py-[29px]">
