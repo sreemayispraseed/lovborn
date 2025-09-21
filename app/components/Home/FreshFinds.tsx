@@ -11,7 +11,7 @@ import assets from "../../../public/assets/assets";
 const products = [
   {
     id: 1,
-    title: "Classic Vanilla",
+    title: "Classic Vanillas",
     price: "₹1000.52",
     desc: "Classic Vanilla is a natural family luxury soap made with shea butter, almond oil, and a soothing vanilla fragrance.",
     img: assets.product1,
